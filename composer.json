@@ -1,0 +1,25 @@
+{
+    "name": "meops/laravel-populate",
+    "version": "0.1.0",
+    "description": "Populate the DB in your Laravel application",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Meops\\Populate\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "meops"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Meops\\Populate\\ServiceProvider"
+            ]
+        }
+    }
+}
