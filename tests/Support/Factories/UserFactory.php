@@ -1,9 +1,9 @@
 <?php
 
-namespace Meops\Populate\Tests\Factories;
+namespace Meops\Populate\Tests\Support\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Meops\Populate\Tests\Models\User;
+use Meops\Populate\Tests\Support\Models\User;
 
 class UserFactory extends Factory
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Meops\Populate\Tests\Models;
+namespace Meops\Populate\Tests\Support\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Meops\Populate\Tests\Factories\UserFactory;
+use Meops\Populate\Tests\Support\Factories\UserFactory;
 
 class User extends Model
 {

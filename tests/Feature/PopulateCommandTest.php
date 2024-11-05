@@ -8,7 +8,7 @@ use PHPUnit\Framework\Attributes\Test;
 class PopulateCommandTest extends TestCase
 {
     private string $command = 'db:populate';
-    private string $modelFqn = 'Meops\\Populate\\Tests\\Models\\User';
+    private string $modelFqn = 'Meops\\Populate\\Tests\\Support\\Models\\User';
 
     #[Test]
     public function canCreateSingleRecord(): void

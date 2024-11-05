@@ -15,7 +15,7 @@ class TestCase extends OrchestraTestCase
 
         $this->artisan('migrate', [
             '--database' => 'testing',
-            '--path' => __DIR__ . '/Migrations/users.php',
+            '--path' => __DIR__ . '/Support/Migrations/users.php',
             '--realpath' => true,
         ]);
     }
