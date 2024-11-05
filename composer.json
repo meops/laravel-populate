@@ -1,6 +1,6 @@
 {
     "name": "meops/laravel-populate",
-    "version": "0.1.0",
+    "version": "1.0.1",
     "description": "Populate the DB in your Laravel application",
     "type": "library",
     "license": "MIT",
