@@ -2,12 +2,12 @@
 
 namespace Meops\Populate;
 
-use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+use Illuminate\Support\ServiceProvider;
 use Meops\Populate\Commands\Populate;
 
-class ServiceProvider extends BaseServiceProvider
+class PopulateServiceProvider extends ServiceProvider
 {
-    public function register()
+    public function register(): void
     {
         if($this->app->runningInConsole()) {
             $this->commands([
