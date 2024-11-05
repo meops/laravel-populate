@@ -34,4 +34,18 @@ class PopulateCommandTest extends TestCase
 
         $this->assertDatabaseCount($this->modelFqn, 6);
     }
+
+    #[Test]
+    public function canCreateRecordsWithOverrides(): void
+    {
+        $this->artisan($this->command, [
+            'class' => $this->modelFqn,
+            '--override' => ['name=John Doe']
+        ])
+            ->expectsOutput("Populated database with 1 `{$this->modelFqn}` record")
+            ->assertExitCode(0);
+
+        $this->assertDatabaseCount($this->modelFqn, 1);
+        $this->assertDatabaseHas($this->modelFqn, ['name' => 'John Doe']);
+    }
 }
