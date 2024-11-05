@@ -37,5 +37,8 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit"
+    },
+    "archive": {
+        "exclude": ["/.github"]
     }
 }
