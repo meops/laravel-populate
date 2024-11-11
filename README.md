@@ -7,10 +7,10 @@ Install the package as a development dependency:
 composer require --dev meops/laravel-populate
 ```
 ## Usage
-Records are created by specifying the model whose factory definition should be used to generate field values. A fully qualified class name may be passed in, or when an unqualified class name is passed in the package will look for matching models in the `App/Models` directory by default.
+Records are created by specifying the model whose factory definition should be used to generate field values.
 
 ### Create a single record
-The first argument specifies the model to create:
+The first argument specifies the model to create. The package will look for a matching model name in the `App/Models` directory by default:
 ```php
 php artisan db:populate User
 ```
@@ -26,5 +26,5 @@ php artisan db:populate User 10
 ### Create multiple records with custom data
 Specify any fields whose values should be overriden using the `-o` option with the format `field=value`. Multiple fields may be specified by providing multiple `-o` options.
 ```php
-php artisan db:populate User 3 -o "created_at=2001-01-01 10:00"
+php artisan db:populate User 3 -o email=me@example.com -o password=secret
 ```
