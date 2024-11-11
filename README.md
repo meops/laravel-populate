@@ -26,5 +26,5 @@ php artisan db:populate User 10
 ### Create multiple records with custom data
 Specify any fields whose values should be overriden using the `-o` option with the format `field=value`. Multiple fields may be specified by providing multiple `-o` options.
 ```php
-php artisan db:populate User 3 -o email=me@example.com -o password=secret
+php artisan db:populate User -o email=me@example.com -o password=secret
 ```
