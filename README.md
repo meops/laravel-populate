@@ -1,5 +1,8 @@
-![Tests](https://github.com/meops/laravel-populate/actions/workflows/test.yml/badge.svg)
 # Laravel Populate
+
+[![Packagist](https://img.shields.io/packagist/v/meops/laravel-populate.svg)](https://packagist.org/packages/meops/laravel-populate)
+[![Tests](https://github.com/meops/laravel-populate/actions/workflows/test.yml/badge.svg)](https://github.com/meops/laravel-populate/actions)
+
 An Artisan command for populating your database. It allows you to quickly create records in your database using the model factories you have already defined in your Laravel application without writing seeders.
 ## Installation
 Install the package as a development dependency:    
@@ -24,7 +27,9 @@ The second argument is optional and specifies the number of records to create:
 php artisan db:populate User 10
 ```
 ### Create multiple records with custom data
-Specify any fields whose values should be overriden using the `-o` option with the format `field=value`. Multiple fields may be specified by providing multiple `-o` options.
+Specify any fields whose values should be overriden using the `-o` option with the format `field=value`. Multiple fields can be overriden by providing multiple `-o` options.
 ```php
 php artisan db:populate User -o email=me@example.com -o password=secret
 ```
+## Prerequisites
+Any model you wish to populate must have a factory defined.
