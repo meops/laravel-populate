@@ -27,6 +27,8 @@ class Populate extends Command
 
     public function handle(): int
     {
+        $this->overrides = [];
+
         if($this->option('override')) {
             $this->overrides = $this->overridesToArray($this->option('override'));
         }
